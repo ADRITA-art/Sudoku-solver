@@ -11,7 +11,7 @@ const solvePuzzle = (req, res) => {
     return res.status(400).json({ error: 'Invalid Sudoku grid format. Please provide a 9x9 grid.' });
   }
 
-  const solvedGrid = JSON.parse(JSON.stringify(grid)); // Deep copy the grid
+  const solvedGrid = JSON.parse(JSON.stringify(grid)); 
   if (solveSudoku(solvedGrid)) {
     res.json({ solvedGrid });
   } else {
